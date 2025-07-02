@@ -107,11 +107,9 @@ Headers: Authorization: Bearer <token>
 
 
 ## 🚀 Deploy
-``` bash
+
 Этот проект задеплоен на Render:
 
-🔗 [Live Demo][https://book-api-zhm6.onrender.com/docs]
-
-```
+🔗 [Live Demo](https://book-api-zhm6.onrender.com/docs)
 
 
