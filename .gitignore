@@ -1,12 +1,33 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+
+# SQLite databases
 *.sqlite3
 *.db
+
+# Environment variables
 .env
+
+# Virtual environments
 .venv/
 venv/
+
+# Editor/IDE settings
 .idea/
+.vscode/
+
+# macOS
 .DS_Store
+
+# Log files
 *.log
+
+# Pytest cache
+.pytest_cache/
+
+# Docker
+*.bak
+

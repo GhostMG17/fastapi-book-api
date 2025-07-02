@@ -1,11 +1,20 @@
-FROM python:3.11-slim
+# Используем официальный Python-образ
+FROM python:3.11
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-COPY . /app
+# Копируем зависимости
+COPY requirements.txt .
 
-RUN pip install --upgrade pip
+# Устанавливаем зависимости
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install fastapi uvicorn[standard] sqlalchemy aiosqlite passlib[bcrypt] python-jose[cryptography] httpx pytest python-multipart
+# Копируем всё приложение
+COPY . .
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# Открываем порт
+EXPOSE 8000
+
+# Запуск приложения через uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
