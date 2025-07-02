@@ -53,7 +53,9 @@ async def register_user(user: UserCreate, session: AsyncSession = Depends(get_se
     session.add(new_user)
     await session.commit()
     await session.refresh(new_user)
-    return new_user
+
+    # 🔥 ВОТ ЭТА СТРОКА: возвращаем Pydantic-схему
+    return UserRead.from_orm(new_user)
 
 
 @app.post(
@@ -98,7 +100,7 @@ async def create_book(
     session.add(new_book)  # добавляем в сессию
     await session.commit()  # сохраняем в базе
     await session.refresh(new_book)  # обновляем из базы, чтобы получить id
-    return new_book  # возвращаем клиенту
+    return BookRead.from_orm(new_book)  # возвращаем клиенту
 
 
 # GET /books — получить список всех книг

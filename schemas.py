@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field,ConfigDict
 
 
 # 📚 Схема для добавления книги (входные данные)
@@ -10,6 +10,9 @@ class BookCreate(BaseModel):
 # 📖 Схема для чтения книги (ответ клиенту), включает id
 class BookRead(BookCreate):
     id: int = Field(..., example=1, description="ID книги")
+
+    class Config:
+        orm_mode = True
 
 
 # 👤 Схема для регистрации пользователя
@@ -23,8 +26,12 @@ class UserRead(BaseModel):
     id: int = Field(..., example=1, description="ID пользователя")
     username: str = Field(..., example="johndoe", description="Имя пользователя")
 
+    model_config = ConfigDict(from_attributes=True)
 
-# 🔑 Схема токена при логине
+    class Config:
+        orm_mode = True
+
+        # 🔑 Схема токена при логине
 class Token(BaseModel):
     access_token: str = Field(..., example="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...")
     token_type: str = Field(default="bearer", example="bearer")
