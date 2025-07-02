@@ -5,11 +5,9 @@ passlib[bcrypt]==1.7.4
 httpx==0.27.0
 python-jose==3.3.0
 python-multipart==0.0.6
-pydantic==2.7.1
-pydantic-settings==2.1.0
-pydantic-extra-types==2.1.0
+pydantic==1.10.15
 SQLAlchemy==2.0.30
 
-# для тестов, если используешь pytest
+# только если тесты нужны на сервере (необязательно)
 pytest==8.2.1
 pytest-asyncio==0.23.5
