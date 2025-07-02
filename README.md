@@ -44,3 +44,41 @@ source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
+
+### 3. Документация API
+```bash
+Открой в браузере:
+
+Swagger: http://localhost:8000/docs
+
+ReDoc: http://localhost:8000/redoc
+```
+
+### 🐳 Docker (простой запуск)
+```bash
+docker build -t fastapi-books .
+docker run -it --rm -p 8000:8000 fastapi-books
+```
+
+### 🧪 Запуск тестов
+``` bash
+pytest test_main.py
+```
+
+### 📬 Примеры API
+## Регистрация
+``` bash
+POST /register
+{
+  "username": "admin",
+  "password": "secret"
+}
+```
+
+## Логин
+``` bash
+POST /login
+Form: username=admin&password=secret
+Returns: {"access_token": "…"}
+```
+
