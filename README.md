@@ -36,4 +36,13 @@
 ```bash
 git clone https://github.com/username/fastapi-book-api.git
 cd fastapi-book-api
+```
+2. Установи зависимости и запусти сервер
+bash
+Копировать
+Редактировать
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 
