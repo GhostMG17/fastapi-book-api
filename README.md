@@ -66,7 +66,7 @@ pytest test_main.py
 ```
 
 ### 📬 Примеры API
-## Регистрация
+#### Регистрация
 ``` bash
 POST /register
 {
@@ -75,7 +75,7 @@ POST /register
 }
 ```
 
-## Логин
+#### Логин
 ``` bash
 POST /login
 Form: username=admin&password=secret
