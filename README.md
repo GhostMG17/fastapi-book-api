@@ -110,7 +110,7 @@ Headers: Authorization: Bearer <token>
 ``` bash
 Этот проект задеплоен на Render:
 
-🔗 [Live Demo][(https://fastapi-book-api.onrender.com) ](https://book-api-zhm6.onrender.com/docs) 
+🔗 [Live Demo][https://book-api-zhm6.onrender.com/docs]
 
 ```
 
