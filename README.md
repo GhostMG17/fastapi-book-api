@@ -82,3 +82,26 @@ Form: username=admin&password=secret
 Returns: {"access_token": "…"}
 ```
 
+#### Добавление книги
+``` bash
+POST /books
+Headers: Authorization: Bearer <token>
+{
+  "title": "Моя книга",
+  "author": "Я"
+}
+```
+
+### 📁 Структура проекта
+``` bash
+.
+├── main.py              # Основное приложение FastAPI
+├── models.py            # SQLAlchemy модели
+├── schemas.py           # Pydantic схемы
+├── auth.py              # Хэширование, JWT, безопасность
+├── database.py          # Настройка базы данных
+├── test_main.py         # Автотесты
+├── Dockerfile           # Docker-образ
+└── requirements.txt     # Зависимости
+```
+
