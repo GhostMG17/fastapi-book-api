@@ -105,3 +105,13 @@ Headers: Authorization: Bearer <token>
 └── requirements.txt     # Зависимости
 ```
 
+
+## 🚀 Deploy
+``` bash
+Этот проект задеплоен на Render:
+
+🔗 [Live Demo][(https://fastapi-book-api.onrender.com) ](https://book-api-zhm6.onrender.com/docs) 
+
+```
+
+
